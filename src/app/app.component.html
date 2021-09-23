@@ -1,5 +1,32 @@
-<nav class="navbar navbar-light bg-light">
-  <span routerLink="" class="navbar-brand mb-0 h1">Navbar</span>
-  <a routerLink="servers">Servers</a>
-  <a routerLink="users">Users</a>
-</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-offset-1">
+      <ul class="nav nav-tabs">
+        <li role="presentation">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLink=""
+            >Navbar</a
+          >
+        </li>
+        <li role="presentation">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="['users']"
+            >Users</a
+          >
+        </li>
+        <li role="presentation">
+          <a class="nav-link" routerLinkActive="active" routerLink="servers"
+            >Servers</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-offset-1">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
